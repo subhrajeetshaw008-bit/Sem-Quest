@@ -28,8 +28,9 @@ Or serve it locally:
 git clone https://github.com/subhrajeetshaw008-bit/Sem-Quest.git
 cd Sem-Quest
 python3 -m http.server 8000
-# then visit http://localhost:8000
 ```
+
+Then visit http://localhost:8000
 
 ## Deploy free on GitHub Pages
 
@@ -38,4 +39,47 @@ python3 -m http.server 8000
 3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then **Save**.
 4. Your app will be live at `https://<your-username>.github.io/<repo-name>/`.
 
-## Project
+## Project structure
+
+| File | Purpose |
+|---|---|
+| `index.html` | Page markup |
+| `style.css` | Styling and light/dark themes |
+| `script.js` | Timetable generator, XP logic, rendering, storage |
+| `README.md` | Project documentation |
+| `LICENSE` | MIT license |
+| `.gitignore` | Files Git should ignore |
+
+## Customising
+
+- **Start date or length:** edit `S0` (start date) and `N` (number of days) at the top of `script.js`.
+- **Exam date:** change `new Date(2026,11,10)` in the `render()` function.
+- **Subjects and timetable:** edit the `plan()` function in `script.js`.
+- **XP values:** edit the `xp()` function.
+- **Reset all progress:** clear this site's data in your browser, or run `localStorage.removeItem('sem3-quest-v1')` in the console.
+
+## How points work
+
+| Task type | XP |
+|---|---|
+| Study and DSA blocks | 20 |
+| Python and lab blocks | 15 |
+| Optional mini-project (Sunday) | 25 |
+| Sleep on time | 5 |
+| Bonus tasks you add | 10 |
+| Finish every focus block in a day | +50 |
+
+Each consecutive perfect day adds 10% to that day's XP, up to 2x.
+
+## Notes
+
+- Progress is stored per browser and device, so ticks on your laptop will not appear on your phone.
+- Future days stay locked until their date, but you can still edit their tasks.
+
+## Author
+
+Made by [Subhrajeet Shaw](https://github.com/subhrajeetshaw008-bit).
+
+## License
+
+MIT, see the [LICENSE](LICENSE) file.
