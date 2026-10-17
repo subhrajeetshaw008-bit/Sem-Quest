@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sem III Quest: a gamified study planner and to-do list with XP, levels, streaks and badges.">
+<title>Sem III Quest</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><main>
+<div class="top"><div><h1>Sem III Quest</h1><p class="sub" id="cd"></p></div><button class="link" id="theme" type="button">Switch theme</button></div>
+<section class="hero"><div class="lv"><b id="lvn">1</b><span>Level</span></div>
+<div class="hm"><div class="rank" id="rk"></div><div class="track"><i id="xpb"></i></div><div class="xt" id="xt"></div><div class="chips" id="chips"></div></div></section>
+<div class="days" id="days"></div>
+<div class="prog"><span id="c"></span><span id="dx"></span></div>
+<div class="track"><i id="fill"></i></div>
+<div id="list"></div>
+<form class="add" id="addf"><input class="tm" id="ntime" placeholder="Time" maxlength="12" aria-label="Time"><input class="tk" id="ntext" placeholder="Add a bonus task for this day" maxlength="140" aria-label="New task"><button class="btn" type="submit">Add task</button></form>
+<button class="link danger" id="rs" type="button">Reset this day</button>
+<h2>Badges</h2><div class="badges" id="bd"></div>
+<details><summary>How points work</summary>
+<p>Study, DSA and lab blocks earn 20 XP (Python and labs 15). Sleep on time earns 5 and bonus tasks 10. Finishing every focus block in a day gives 50 bonus XP. Each day in a row adds 10% to that day's XP, up to 2x. Future days stay locked until their date. On weekdays, Genshin unlocks after that day's focus blocks are done.</p>
+<p>Rules: 10-min break after every 50 min of study. Sleep by 11:30 PM. If a day slips, use the Sunday recap hour as catch-up. From 16 Nov the second weekly session of each subject becomes a timed past paper. Dates assume exams start around 10 Dec. Progress is saved in this browser.</p></details>
+</main>
+<div id="toast" role="status"><span id="tmsg"></span><button class="link" id="undo" type="button">Undo</button></div>
+<script src="script.js"></script>
+</body>
+</html>
